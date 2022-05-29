@@ -20,4 +20,6 @@ void loop() { //Choose Serial1 or Serial2 as required
 }
 ```
 ## Funcionamiento
-Primero creamos dos objetos serial 1 y 2, configurandolos con el mismo baud rate para conseguir cortocircuitarlos. Ya en el loop(), que es donde se desarrollara la función principal de este programa, miramos si tenemos algo disponible para leer en el primer serial. Eso que se encuentra en el 1 será escrito por pantalla por el 2, y debido a que los puertos de los dos estan conectados tanto para transmitir como recibir datos  también se recibirá en el mismo serial 2 cuando hagamos su avaliable(). Para finalizar realizamos el mismo proceso al revés pero con el mismo resultado, leyendo con la función read lo que hay en el buffer del UART2 (serial 2) y escribiendolo por el puerto UART0 (serial 1).
+Primero creamos dos objetos serial 1 y 2, configurandolos con el mismo baud rate para conseguir cortocircuitarlos. Ya en el loop(), que es donde se desarrollara la función principal de este programa, miramos si tenemos algo disponible para leer en el primer serial. Eso que se encuentra en el 1 será escrito por pantalla por el 2, y debido a que los puertos de los dos estan conectados tanto para transmitir como recibir datos  también se recibirá en el mismo serial 2 cuando hagamos su avaliable().
+
+Para finalizar realizamos el mismo proceso al revés pero con el mismo resultado, leyendo con la función read lo que hay en el buffer del UART2 (serial 2) y escribiendolo por el puerto UART0 (serial 1).
